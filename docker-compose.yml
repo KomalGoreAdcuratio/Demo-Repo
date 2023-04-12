@@ -2,8 +2,12 @@ version: '3.9'
 services:
   django:
     image: 
-      django-docker:0.0.1
+      ubuntu
     build: .
     ports:
       -  8000:8000
     tty: True
+  redis:
+    image: redis
+    ports:
+      -  6379:6379
